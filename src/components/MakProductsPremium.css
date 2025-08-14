@@ -1,0 +1,261 @@
+/* --- Imports & Global Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+
+/* NOTE: `body { cursor: none; }` is now in CustomCursor.css */
+
+/* --- Layout & Background --- */
+.premium-section {
+  position: relative;
+  padding: 80px 20px;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fcf6f9; /* Light, elegant background */
+  color: #333;
+}
+
+.liquid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.blob-1, .blob-2 {
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  background: #f0c3d9;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  animation: float1 40s infinite ease-in-out;
+}
+.blob-2 {
+  background: #d8b4e3;
+  animation: float2 50s infinite ease-in-out;
+}
+.blob-1 { top: -20%; left: -20%; }
+.blob-2 { bottom: -20%; right: -20%; }
+
+@keyframes float1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(15vw, -10vw) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes float2 {
+  0% { transform: translate(0, 0) scale(1.1); }
+  50% { transform: translate(-10vw, 15vw) scale(1); }
+  100% { transform: translate(0, 0) scale(1.1); }
+}
+
+/* Content container */
+.premium-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  width: 100%;
+  text-align: center;
+  perspective: 1000px;
+}
+
+/* Logo glow & pulse */
+.logo-glow-wrapper {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #f0c3d9, inset 0 0 10px #f0c3d9;
+  animation: pulsePink 4s infinite alternate;
+}
+@keyframes pulsePink {
+  0% { box-shadow: 0 0 20px #f0c3d9, inset 0 0 10px #f0c3d9; }
+  100% { box-shadow: 0 0 40px #f0c3d9, inset 0 0 20px #f0c3d9; }
+}
+.logo {
+  width: 180px;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px #fff inset;
+  transition: all 0.4s ease;
+}
+
+/* Main title with cursive font & glow */
+.main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #4b0082; /* Deep purple */
+  text-shadow: 0 0 10px rgba(75, 0, 130, 0.4);
+  letter-spacing: 2px;
+  will-change: transform;
+}
+
+/* Subheading with shimmer animation */
+.sub-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  margin-top: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  color: #666;
+  opacity: 0.9;
+  will-change: transform;
+}
+
+/* Infinite Scroll Gallery */
+.scroll-gallery-wrapper {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  margin-top: 40px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.scroll-gallery-wrapper:hover {
+  cursor: grab;
+}
+
+.products-grid-scroll {
+  display: flex;
+  width: fit-content;
+  gap: 30px;
+  animation: scrollGallery 60s linear infinite;
+  will-change: transform;
+}
+.products-grid-scroll.paused {
+  animation-play-state: paused;
+}
+
+@keyframes scrollGallery {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Product card styles with 3D tilt, glassmorphism & dynamic glow */
+.product-card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 250px;
+  height: 380px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 65%;
+  border-radius: 15px;
+  overflow: hidden;
+  transform: translateZ(20px);
+  transition: transform 0.4s;
+  will-change: transform;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: transform 0.4s, filter 0.3s;
+}
+
+/* Dynamic Glow Effect on Hover */
+.dynamic-glow {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 10;
+}
+.product-card:hover .dynamic-glow {
+  opacity: 1;
+}
+
+/* Product details overlay on hover */
+.product-details-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.product-card:hover .product-details-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-details-overlay p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  transform: translateZ(20px);
+  will-change: transform;
+}
+
+.product-details-overlay button {
+  background: #4b0082;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(75, 0, 130, 0.4);
+  transition: background-color 0.3s;
+  transform: translateZ(20px);
+  will-change: transform;
+}
+.product-details-overlay button:hover {
+  background-color: #6a0dad;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  /* NOTE: `body { cursor: default; }` is now in CustomCursor.css */
+  .main-title { font-size: 2.5rem; }
+  .sub-title { font-size: 1.2rem; }
+}

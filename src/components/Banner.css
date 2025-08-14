@@ -1,0 +1,47 @@
+.banner-slider-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.banner-slide {
+  position: relative;
+}
+
+.banner-image {
+  display: block;
+  width: 100%;
+  height: auto; /* Keeps original ratio, removes black bars */
+}
+
+.banner-quote {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  background: rgba(0, 0, 128, 0.6);
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.banner-quote h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .banner-quote {
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+    padding: 10px 15px;
+  }
+
+  .banner-quote h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+}

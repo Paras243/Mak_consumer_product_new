@@ -1,0 +1,38 @@
+.hero-image {
+  /*background: url('https://via.placeholder.com/1200x300?text=Explore+QTrip') no-repeat center;*/
+  background-size: cover;
+  height: 300px;
+}
+
+.hero-input {
+  padding: 10px;
+  width: 50%;
+  margin-top: 20px;
+}
+
+body{
+  /*background-color: blanchedalmond;*/
+  /*background-color: #f8f9fa;*/
+  background-color:white;
+}
+button, .MuiButton-root {
+  background-color: initial;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* This hides the custom cursor and reverts to the default system cursor *
+body {
+  cursor: auto;
+}
+
+/* This class is now effectively empty and won't render a custom cursor *
+.custom-cursor {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: none;
+}*/

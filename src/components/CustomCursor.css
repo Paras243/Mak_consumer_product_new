@@ -1,0 +1,42 @@
+body {
+  cursor: none; /* This hides the default cursor on all pages */
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 9999;
+  /* Reduced size for a simpler dot */
+  width: 8px;
+  height: 8px;
+  /* Changed color to a simple dark gray */
+  background-color: #333333;
+  border-radius: 50%;
+  /* Removed the blur and blend mode for a clean look */
+  opacity: 1; 
+  filter: none; 
+  mix-blend-mode: normal;
+  will-change: transform;
+}
+
+
+/*body {
+  cursor: none; /* This hides the default cursor on all pages 
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0; top: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 30px;
+  height: 30px;
+  background-color: #d11e8a;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  filter: blur(8px);
+  will-change: transform;
+}*/
