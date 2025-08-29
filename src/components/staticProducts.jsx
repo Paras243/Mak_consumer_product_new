@@ -15,7 +15,7 @@ import lemonGrass_floor_cleaner_2 from "../assets/products/LemonGrass_floor_clea
 import lemonDish_wash_1 from "../assets/products/Lemon_Dish_wash_1.png";
 import lemonDish_wash_2 from "../assets/products/Lemon_Dish_wash_2.jpg";
 
-import laundry_detergent_1 from "../assets/products/Laundry_detergent_1.jpg";
+import laundry_detergent_1 from "../assets/products/laundry_detergent_1.jpg";
 import laundry_detergent_2 from "../assets/products/Laundry_detergent_2.jpg";
 
 import greenApple_gentle_wash_1 from "../assets/products/GreenApple_gentle_wash_1.png";
