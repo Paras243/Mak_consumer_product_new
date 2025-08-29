@@ -15,8 +15,8 @@ import lemonGrass_floor_cleaner_2 from "../assets/products/LemonGrass_floor_clea
 import lemonDish_wash_1 from "../assets/products/Lemon_Dish_wash_1.png";
 import lemonDish_wash_2 from "../assets/products/Lemon_Dish_wash_2.jpg";
 
-import laundry_detergent_1 from "../assets/products/laundry_detergent_1.jpg";
-import laundry_detergent_2 from "../assets/products/laundry_detergent_2.jpg";
+import laundry_detergent_1 from "../assets/products/Laundry_detergent_1.jpg";
+import laundry_detergent_2 from "../assets/products/Laundry_detergent_2.jpg";
 
 import greenApple_gentle_wash_1 from "../assets/products/GreenApple_gentle_wash_1.png";
 import greenApple_gentle_wash_2 from "../assets/products/GreenApple_gentle_wash_2.png";
@@ -32,8 +32,8 @@ import floral_floor_cleaner_2 from "../assets/products/Floral_floor_cleaner_2.jp
 
 import fabric_conditioner_1 from "../assets/products/Fabric_conditioner_1.jpg";
 
-import colour_fixup_1 from "../assets/products/colour_fixUp_1.png";
-import colour_fixup_2 from "../assets/products/colour_fixUp_2.png";
+import colour_fixup_1 from "../assets/products/Colour_fixUp_1.png";
+import colour_fixup_2 from "../assets/products/Colour_fixUp_2.png";
 
 import bathroom_cleaner_1 from "../assets/products/Bathroom_cleaner_1.jpg";
 import bathroom_cleaner_2 from "../assets/products/Bathroom_cleaner_2.png";
