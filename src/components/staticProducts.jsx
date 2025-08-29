@@ -18,8 +18,8 @@ import lemonDish_wash_2 from "../assets/products/Lemon_Dish_wash_2.jpg";
 import laundry_detergent_1 from "../assets/products/laundry_detergent_1.jpg";
 import laundry_detergent_2 from "../assets/products/laundry_detergent_2.jpg";
 
-import greenApple_gentle_wash_1 from "../assets/products/greenApple_gentle_wash_1.png";
-import greenApple_gentle_wash_2 from "../assets/products/greenApple_gentle_wash_2.png";
+import greenApple_gentle_wash_1 from "../assets/products/GreenApple_gentle_wash_1.png";
+import greenApple_gentle_wash_2 from "../assets/products/GreenApple_gentle_wash_2.png";
 
 import glass_cleaner_1 from "../assets/products/Glass_cleaner_1.png";
 import glass_cleaner_2 from "../assets/products/Glass_cleaner_2.png";

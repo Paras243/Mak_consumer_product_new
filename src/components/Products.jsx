@@ -7,7 +7,7 @@ import { products } from "../components/staticProducts";
 
 function Products() {
   return (
-    <Container id="products-section" sx={{ py: 6 }}>
+    <Container id="products-section" className="products" sx={{ py: 6 }}>
       <Typography
         variant="h4"
         component="h2"
